@@ -1,6 +1,4 @@
-## This plugin is no longer being actively maintained.
-For a functional replacement, I recommend https://github.com/khanhas/Spicetify.
-
+## This is a hacked version of the plugin that will eventually allow for custom keys to be added on the fly
 
 
 # SpotifyPlugin

@@ -30,7 +30,7 @@ namespace SpotifyPlugin
         public SpotifyWebAPI WebApi;
 
         private readonly string _clientSecret = APIKeys.ClientSecret;
-        private readonly string _clientId = APIKeys.ClientId;
+        private readonly string _clientId = APIKeys.ClientID;
         private readonly Scope _scope = Scope.UserReadPlaybackState | Scope.UserModifyPlaybackState;
 
         private readonly int _timeout = 20;

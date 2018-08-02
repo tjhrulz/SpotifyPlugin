@@ -135,7 +135,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release "$(SolutionDir)\DllExporter\DllExporter.exe" "$(ConfigurationName)" "$(PlatformName)" "$(TargetDir)\" "$(TargetFileName)"</PostBuildEvent>
+    <PostBuildEvent>taskkill /f /fi "imagename eq Rainmeter.exe"
+"$(SolutionDir)\DllExporter\DllExporter.exe" "$(ConfigurationName)" "$(PlatformName)" "$(TargetDir)\" "$(TargetFileName)"
+xcopy  "$(TargetDir)$(TargetFileName)" "%25appdata%25\Rainmeter\Plugins" /Y</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
