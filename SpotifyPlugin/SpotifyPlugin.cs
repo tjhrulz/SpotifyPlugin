@@ -137,11 +137,12 @@ namespace SpotifyPlugin
                 case "playing":
                     return (parent.Status?.IsPlaying).GetValueOrDefault() ? 1 : 0;
 
+                case "duration":
                 case "length":
                     return (parent.Status?.Item?.DurationMs).GetValueOrDefault();
 
                 case "progress":
-                    double? o = parent.Status?.ProgressMs / parent.Status?.Item?.DurationMs;
+                    double? o = parent.Status?.ProgressMs / (double?)parent.Status?.Item?.DurationMs;
                     return o.GetValueOrDefault();
             }
             //API.Log(API.LogType.Error, "SpotifyPlugin: Type=" + measureType + " not valid");
